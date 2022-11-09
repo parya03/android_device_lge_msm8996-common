@@ -93,7 +93,6 @@ PRODUCT_PACKAGES += \
     android.hardware.audio.common@6.0-util \
     android.hardware.audio.effect@6.0 \
     android.hardware.audio.effect@6.0-impl \
-    audio.a2dp.default \
     audio.primary.msm8996 \
     audio.r_submix.default \
     audio.usb.default \
@@ -103,6 +102,7 @@ PRODUCT_PACKAGES += \
     libqcomvisualizer \
     libqcomvoiceprocessing \
     libvolumelistener
+    #audio.a2dp.default \ Deprecated for Android 13
 
 -include $(LOCAL_PATH)/audio/config.mk
 
@@ -119,7 +119,7 @@ PRODUCT_PACKAGES += \
     android.hardware.camera.provider@2.4-service \
     camera.device@3.2-impl \
     libshim_camera \
-    Snap
+    #Snap
 
 # Charger
 PRODUCT_PACKAGES += \
@@ -139,7 +139,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.graphics.allocator@2.0-impl \
     android.hardware.graphics.allocator@2.0-service \
-    android.hardware.graphics.composer@2.1-impl \
     android.hardware.graphics.composer@2.1-service \
     android.hardware.graphics.mapper@2.0-impl-2.1 \
     android.hardware.memtrack@1.0-impl \
@@ -150,6 +149,7 @@ PRODUCT_PACKAGES += \
     memtrack.msm8996 \
     libdisplayconfig \
     libqdMetaData.system
+    #android.hardware.graphics.composer@2.1-impl \
 
 # Doze mode
 PRODUCT_PACKAGES += \
@@ -159,7 +159,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.drm@1.0-impl \
     android.hardware.drm@1.0-service \
-    android.hardware.drm@1.3-service.clearkey
+    #android.hardware.drm@1.3-service.clearkey
 
 # FlipFlap
 PRODUCT_PACKAGES += \
@@ -285,11 +285,11 @@ PRODUCT_PACKAGES += \
     libOmxEvrcEnc \
     libOmxQcelp13Enc \
     libOmxVdec \
-    libOmxVdecHevc \
     libOmxVenc \
     libOmxVidcCommon \
     libstagefrighthw \
     libstagefright_soft_flacdec
+    #libOmxVdecHevc \
 
 # Power
 PRODUCT_PACKAGES += \
@@ -339,7 +339,7 @@ PRODUCT_SOONG_NAMESPACES += \
 
 # TimeKeep
 PRODUCT_PACKAGES += \
-    timekeep \
+    #timekeep \
     TimeKeep
 
 # Tools
@@ -351,7 +351,7 @@ PRODUCT_PACKAGES += \
 
 # Treble
 PRODUCT_PACKAGES += \
-    vndk-sp \
+    #vndk-sp \ Won't build with it not commented
 
 PRODUCT_COPY_FILES += \
     prebuilts/vndk/v28/arm64/arch-arm64-armv8-a/shared/vndk-core/libprotobuf-cpp-full.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libprotobuf-cpp-full-v28.so \
@@ -399,4 +399,4 @@ PRODUCT_PACKAGES += \
 
 # CryptfsHW
 PRODUCT_PACKAGES += \
-    vendor.qti.hardware.cryptfshw@1.0-service-qti.qsee
+    #vendor.qti.hardware.cryptfshw@1.0-service-qti.qsee
